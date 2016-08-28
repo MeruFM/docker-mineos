@@ -3,8 +3,12 @@ MAINTAINER Yuji ODA
 
 # Installing Dependencies
 RUN apt-get update; \
-    apt-get -y install supervisor screen python-cherrypy3 rdiff-backup git openjdk-8-jre-headless; \
+    apt-get -y install supervisor screen python-cherrypy3 rdiff-backup git; \
     apt-get -y install openssh-server uuid pwgen
+
+RUN add-apt-repository -y ppa:openjdk-r/ppa
+RUN apt-get update
+RUN apt-get install -y openjdk-8-jre
 
 # Installing MineOS scripts
 RUN mkdir -p /usr/games /var/games/minecraft; \
