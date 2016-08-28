@@ -3,7 +3,7 @@ MAINTAINER Yuji ODA
 
 # Installing Dependencies
 RUN apt-get update; \
-    apt-get -y install supervisor screen python-cherrypy3 rdiff-backup git; \
+    apt-get -y install software-properties-common supervisor screen python-cherrypy3 rdiff-backup git; \
     apt-get -y install openssh-server uuid pwgen
 
 RUN add-apt-repository -y ppa:openjdk-r/ppa
